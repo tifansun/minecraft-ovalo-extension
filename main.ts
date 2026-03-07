@@ -1,8 +1,9 @@
-//% weight=100 color=#32A9D9 icon="◯"
+//% weight=100 color=#32A9D9 icon="◎"
 namespace figuras {
 
-    //% block="dibujar ovalo radio %radio con bloque %bloque"
-    export function ovalo(radio: number, bloque: number) {
+    //% block="dibujar ovalo radio %radio altura %altura con bloque %bloque"
+    //% bloque.shadow="blocks_block"
+    export function ovalo(radio: number, altura: number, bloque: Block) {
 
         let ubicacion = player.position()
         let x = 0
@@ -20,7 +21,7 @@ namespace figuras {
                 world(x, ubicacion.getValue(Axis.Y), z),
                 positions.add(
                     world(x, ubicacion.getValue(Axis.Y), z),
-                    pos(0, 3, 0)
+                    pos(0, altura, 0)
                 ),
                 FillOperation.Replace
             )
@@ -30,7 +31,7 @@ namespace figuras {
                 world(x, ubicacion.getValue(Axis.Y), z2 + 70),
                 positions.add(
                     world(x, ubicacion.getValue(Axis.Y), z2),
-                    pos(0, 3, 70)
+                    pos(0, altura, 70)
                 ),
                 FillOperation.Replace
             )
@@ -44,7 +45,7 @@ namespace figuras {
             ),
             positions.add(
                 ubicacion,
-                pos(-1 * radio, 3, 70)
+                pos(-1 * radio, altura, 70)
             ),
             FillOperation.Replace
         )
@@ -57,7 +58,7 @@ namespace figuras {
             ),
             positions.add(
                 ubicacion,
-                pos(radio, 3, 70)
+                pos(radio, altura, 70)
             ),
             FillOperation.Replace
         )
