@@ -3,6 +3,8 @@ namespace figuras {
 
     //% block="dibujar ovalo radio %radio altura %altura con bloque %bloque"
     //% bloque.shadow="blocks_block"
+    //% bloque.blockIdentity="blocks.block"
+    //% bloque.defl=BLOCKS.STONE
     export function ovalo(radio: number, altura: number, bloque: Block) {
 
         let ubicacion = player.position()
