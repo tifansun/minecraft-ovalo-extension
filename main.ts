@@ -1,6 +1,9 @@
 //% weight=100 color=#32A9D9 icon="◎"
 namespace figuras {
     //% block="dibujar ovalo con bloque %bloque posicion %ubicacion radio %radio largo %largo altura %altura"
+    //% bloque.shadow=minecraftBlock
+    //% bloque.defl=Block.Cobblestone
+    //% posicion.shadow=minecraftCreatePositionCamera
     export function ovalo(bloque: Block, ubicacion: Position, radio: number, largo: number, altura: number) {
         let x = 0
         let z = 0
