@@ -1,10 +1,7 @@
 //% weight=100 color=#32A9D9 icon="◎"
 namespace figuras {
-
-    //% block="dibujar ovalo posicion %ubicacion radio %radio largo %largo altura %altura con bloque %bloque"
-    //% bloque.shadow="blocks_block"
-    //% bloque.defl=BLOCKS.STONE
-    export function ovalo(ubicacion: Position, radio: number, largo: number, altura: number, bloque: Block) {
+    //% block="dibujar ovalo con bloque %bloque posicion %ubicacion radio %radio largo %largo altura %altura"
+    export function ovalo(bloque: Block, ubicacion: Position, radio: number, largo: number, altura: number) {
         let x = 0
         let z = 0
         let z2 = 0
