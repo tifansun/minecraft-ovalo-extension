@@ -1,0 +1,21 @@
+{
+    "name": "ovalo-extension",
+    "description": "Extensión para dibujar óvalos",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "2.1.27",
+        "targetId": "minecraft"
+    },
+    "supportedTargets": [
+        "minecraft"
+    ]
+}
