@@ -1,6 +1,6 @@
 //% weight=100 color=#32A9D9 icon="◎"
 namespace figuras {
-    //% block="dibujar ovalo con bloque $bloque radio $radio largo $largo altura $altura||ubicacion $ubicacion"
+    //% block="dibujar ovalo con bloque $bloque radio $radio largo $largo altura $altura ubicacion $ubicacion"
     //% bloque.shadow=minecraftBlock
     //% radio.defl=30
     //% largo.defl=70
@@ -8,9 +8,6 @@ namespace figuras {
     //% ubicacion.shadow=minecraftCreatePosition
     //% blockId="figurasOvalo" weight=100
     export function ovalo(bloque: number, radio: number, largo: number, altura: number, ubicacion: Position) {
-        if(!ubicacion){
-            ubicacion = player.position()
-        }
         let x = 0
         let z = 0
         let z2 = 0
