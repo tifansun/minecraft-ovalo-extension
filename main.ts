@@ -1,17 +1,13 @@
 //% weight=100 color=#32A9D9 icon="◎"
 namespace figuras {
-    //% block="dibujar ovalo con bloque $bloque radio $radio largo $largo altura $altura ubicacion $ubicacion"
+    //% block="dibujar ovalo con bloque $bloque radio $radio"
     //% bloque.shadow=minecraftBlock
     //% radio.defl=30
-    //% largo.defl=70
-    //% altura.defl=3
-    //% ubicacion.shadow=minecraftCreatePosition
-    //% blockId="figurasOvalo" weight=100
-    export function ovalo(bloque: number, radio: number, largo: number, altura: number, ubicacion: Position) {
+    export function ovalo(bloque: number, radio: number) {
         let x = 0
         let z = 0
         let z2 = 0
-
+        let ubicacion = player.position()
         for (let angulo2 = 0; angulo2 <= 180; angulo2++) {
 
             x = ubicacion.getValue(Axis.X) + radio * Math.cos(angulo2 * 0.0174)
@@ -23,17 +19,17 @@ namespace figuras {
                 world(x, ubicacion.getValue(Axis.Y), z),
                 positions.add(
                     world(x, ubicacion.getValue(Axis.Y), z),
-                    pos(0, altura, 0)
+                    pos(0, 3, 0)
                 ),
                 FillOperation.Replace
             )
 
             blocks.fill(
                 bloque,
-                world(x, ubicacion.getValue(Axis.Y), z2 + largo),
+                world(x, ubicacion.getValue(Axis.Y), z2 + 70),
                 positions.add(
                     world(x, ubicacion.getValue(Axis.Y), z2),
-                    pos(0, altura, largo)
+                    pos(0, 3, 70)
                 ),
                 FillOperation.Replace
             )
@@ -47,7 +43,7 @@ namespace figuras {
             ),
             positions.add(
                 ubicacion,
-                pos(-1 * radio, altura, largo)
+                pos(-1 * radio, 3, 70)
             ),
             FillOperation.Replace
         )
@@ -60,7 +56,7 @@ namespace figuras {
             ),
             positions.add(
                 ubicacion,
-                pos(radio, altura, largo)
+                pos(radio, 3, 70)
             ),
             FillOperation.Replace
         )
