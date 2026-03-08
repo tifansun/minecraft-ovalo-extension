@@ -1,13 +1,26 @@
 //% weight=100 color=#32A9D9 icon="◎"
 namespace figuras {
-    //% block="dibujar ovalo con bloque %bloque posicion %ubicacion radio %radio largo %largo altura %altura"
+    /**
+     * Build an oval wall of specified ratio, length, and height out of block
+     * @param bloque the Minecraft block the wall will be built with
+     * @param radio how big is te oval
+     * @param largo how far a wall will span in blocks
+     * @param altura the number of blocks high the wall will stand
+     */
+    //% block="dibujar ovalo con bloque $bloque radio $radio largo $largo altura $altura||ubicacion $ubicacion"
     //% bloque.shadow=minecraftBlock
-    //% bloque.defl=Block.Cobblestone
-    //% posicion.shadow=minecraftCreatePositionCamera
-    export function ovalo(bloque: Block, ubicacion: Position, radio: number, largo: number, altura: number) {
+    //% bloque.defl=Block.Diamond
+    //% radio.defl=30
+    //% largo.defl=70
+    //% altura.defl=3
+    //% ubicacion.shadow=minecraftCreatePositionCamera
+    export function ovalo(bloque: Block, radio: number, largo: number, altura: number, ubicacion?: Position) {
         let x = 0
         let z = 0
         let z2 = 0
+        if(!ubicacion){
+            ubicacion = player.position()
+        }
         for (let angulo2 = 0; angulo2 <= 180; angulo2++) {
             x = ubicacion.getValue(Axis.X) + radio * Math.cos(angulo2 * 0.0174)
             z = ubicacion.getValue(Axis.Z) - radio * Math.sin(angulo2 * 0.0174)
