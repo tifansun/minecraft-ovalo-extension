@@ -9,7 +9,6 @@ namespace figuras {
      */
     //% block="dibujar ovalo con bloque $bloque radio $radio largo $largo altura $altura||ubicacion $ubicacion"
     //% bloque.shadow=minecraftBlock
-    //% bloque.defl=Block.Diamond
     //% radio.defl=30
     //% largo.defl=70
     //% altura.defl=3
