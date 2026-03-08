@@ -13,8 +13,9 @@ namespace figuras {
     //% radio.defl=30
     //% largo.defl=70
     //% altura.defl=3
-    //% ubicacion.shadow=minecraftCreatePositionCamera
-    export function ovalo(bloque: Block, radio: number, largo: number, altura: number, ubicacion?: Position) {
+    //% ubicacion.shadow=minecraftCreatePosition
+    //% blockId="figurasOvalo" weight=100
+    export function ovalo(bloque: number, radio: number, largo: number, altura: number, ubicacion?: Position) {
         let x = 0
         let z = 0
         let z2 = 0
