@@ -92,7 +92,7 @@ namespace figuras {
             )
         }
     }
-    //% block="dibujar piso con bloque $bloque radio $radio largo $largo posY $posY"
+    //% block="dibujar piso con bloque $bloque radio $radio largo $largo posY1 $posY1 posY2 $posY2"
     //% bloque.shadow=minecraftBlock
     //% radio.defl=30
     //% largo.defl=70
