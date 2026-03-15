@@ -63,11 +63,12 @@ namespace figuras {
             FillOperation.Replace
         )
     }
-    //% block="dibujar piso con bloque $bloque radio $radio largo $largo"
+    //% block="dibujar piso con bloque $bloque radio $radio largo $largo y $y"
     //% bloque.shadow=minecraftBlock
     //% radio.defl=30
     //% largo.defl=70
-    export function piso(bloque: number, radio: number, largo: number) {
+    //% y.defl=-1
+    export function piso(bloque: number, radio: number, largo: number, y:number) {
         let x = 0
         let z = 0
         let z2 = 0
@@ -82,11 +83,11 @@ namespace figuras {
                 bloque,
                 positions.add(
                     world(x, ubicacion.getValue(Axis.Y), z),
-                    pos(0, -1, 0)
+                    pos(0, y, 0)
                 ),
                 positions.add(
                     world(x, ubicacion.getValue(Axis.Y), z2),
-                    pos(0, -1, largo)
+                    pos(0, y, largo)
                 ),
                 FillOperation.Replace
             )
